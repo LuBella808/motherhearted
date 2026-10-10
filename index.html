@@ -1,22 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lucinda Rae · Now it's your turn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
-.lr-page *{box-sizing:border-box;}
-.lr-page a{color:#9A5A48;}
 html{scroll-behavior:smooth;}
-@media (max-width:899px){.lr-divider{display:none !important;}}
-@media (min-width:900px){#lr-bar{display:none !important;}}
-.lr-h1:hover{background:#FBF5F0 !important}
-.lr-h2:hover{background:rgba(255,255,255,0.14) !important}
-.lr-h3:hover{background:#B87A69 !important; color:#FFFFFF !important}
-.lr-h4:hover{background:#D49A89 !important; color:#FFFFFF !important}
-.lr-h5:hover{background:#FBF5F0 !important; color:#4A3530 !important}
-.lr-h6:hover{background:rgba(255,255,255,0.16) !important; color:#FFFFFF !important}
-.lr-h7:hover{background:#B87A69 !important; color:#FFFFFF !important}
+html,body{margin:0;padding:0;background:#FBF5F0;-webkit-font-smoothing:antialiased;}
+*{box-sizing:border-box;}
+a{color:#9A5A48;}
+a:hover{color:#4A3530;}
+@media (max-width:899px){.divider{display:none !important;}}
+@media (min-width:900px){#mbar{display:none !important;}}
+.h1:hover{background:#FBF5F0 !important}
+.h2:hover{background:rgba(255,255,255,0.14) !important}
+.h3:hover{background:#B87A69 !important;color:#FFFFFF !important}
+.h4:hover{background:#D49A89 !important;color:#FFFFFF !important}
+.h5:hover{background:#FBF5F0 !important;color:#4A3530 !important}
+.h6:hover{background:rgba(255,255,255,0.16) !important;color:#FFFFFF !important}
+.h7:hover{background:#B87A69 !important;color:#FFFFFF !important}
 </style>
-<div class="lr-page" style="position:relative; background:#FBF5F0; color:#4A3530; font-family:'Lora', Georgia, serif; font-size:18px; line-height:1.7; overflow-x:hidden;">
+</head>
+<body>
+<div class="page" style="position:relative; background:#FBF5F0; color:#4A3530; font-family:'Lora', Georgia, serif; font-size:18px; line-height:1.7; overflow-x:hidden;">
 
-    <section id="lr-hero" data-screen-label="Hero" style="position:relative; min-height:max(640px, 92vh); display:flex; align-items:center; justify-content:center; padding:96px 24px; overflow:hidden; background:#3A2A26; color:#FFFFFF; text-align:center;">
-    <video src="PASTE-KARTRA-URL-FOR-kitchen-hero.mp4" autoplay muted loop playsinline style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></video>
+    <section id="hero" data-screen-label="Hero" style="position:relative; min-height:max(640px, 92vh); display:flex; align-items:center; justify-content:center; padding:96px 24px; overflow:hidden; background:#3A2A26; color:#FFFFFF; text-align:center;">
+    <video src="assets/kitchen-hero.mp4" autoplay muted loop playsinline style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></video>
     <div style="position:absolute; inset:0; background:rgba(92,44,30,0.7); mix-blend-mode:multiply;"></div>
     <div style="position:absolute; inset:0; background:rgba(28,16,12,0.22);"></div>
     <div style="position:relative; max-width:860px; display:flex; flex-direction:column; align-items:center;">
@@ -24,8 +35,8 @@ html{scroll-behavior:smooth;}
       <h1 style="margin:0; font-weight:500; font-size:clamp(36px, 5.4vw, 60px); line-height:1.02; letter-spacing:-0.01em; text-wrap:balance;">You've held everyone together. <em style="font-style:italic; color:#EDB7A6;">Now it's your turn.</em></h1>
       <p style="margin:30px auto 0; max-width:30em; font-size:20px; line-height:1.75; text-wrap:pretty;">For the mama running on empty and ready to come back to herself. We all just want to feel good, and when you feel good, you do good.</p>
       <div style="width:100%; display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:40px; white-space:nowrap;">
-        <a href="#video" style="display:inline-flex; align-items:center; justify-content:center; text-decoration:none; border:none; cursor:pointer; background:#FFFFFF; color:#9A5A48; font-family:'Lora', serif; font-size:19px; padding:0 40px; min-height:58px; border-radius:0; transition:background .2s ease;" class="lr-h1">watch the video</a>
-        <a href="#story" style="display:inline-flex; align-items:center; justify-content:center; text-decoration:none; cursor:pointer; background:transparent; border:1px solid #FFFFFF; color:#FFFFFF; font-family:'Lora', serif; font-size:19px; padding:0 40px; min-height:58px; border-radius:0; transition:background .2s ease;" class="lr-h2">read my story</a>
+        <a href="#video" style="display:inline-flex; align-items:center; justify-content:center; text-decoration:none; border:none; cursor:pointer; background:#FFFFFF; color:#9A5A48; font-family:'Lora', serif; font-size:19px; padding:0 40px; min-height:58px; border-radius:0; transition:background .2s ease;" class="h1">watch the video</a>
+        <a href="#story" style="display:inline-flex; align-items:center; justify-content:center; text-decoration:none; cursor:pointer; background:transparent; border:1px solid #FFFFFF; color:#FFFFFF; font-family:'Lora', serif; font-size:19px; padding:0 40px; min-height:58px; border-radius:0; transition:background .2s ease;" class="h2">read my story</a>
       </div>
     </div>
   </section>
@@ -33,7 +44,7 @@ html{scroll-behavior:smooth;}
     <section id="story" data-screen-label="My Story" style="padding:104px 24px;">
     <div style="max-width:1100px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:56px 72px;">
       <div style="flex:1.2 1 400px; max-width:600px; margin:0 auto;">
-        <img src="PASTE-KARTRA-URL-FOR-lucinda-trio.jpg" alt="Lucinda Rae in her kitchen with her morning glass and the trio" style="display:block; width:100%; aspect-ratio:3/2; object-fit:cover;">
+        <img src="assets/lucinda-trio.jpg" alt="Lucinda Rae in her kitchen with her morning glass and the trio" style="display:block; width:100%; aspect-ratio:3/2; object-fit:cover;">
       </div>
       <div style="flex:1 1 340px; display:flex; flex-direction:column;">
         <p style="margin:0 0 14px; font-size:16px; font-style:italic; color:#9A5A48;">my story</p>
@@ -48,7 +59,7 @@ html{scroll-behavior:smooth;}
   </section>
 
     <section data-screen-label="Quote" style="position:relative; min-height:max(720px, 96vh); display:flex; align-items:center; justify-content:center; padding:128px 28px; overflow:hidden; background:#3A2A26;">
-    <img src="PASTE-KARTRA-URL-FOR-lu-young-mom.jpg" alt="A young mother lifting her baby in warm sunlight" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:45% 30%; filter:saturate(1.05);">
+    <img src="assets/lu-young-mom.jpg" alt="A young mother lifting her baby in warm sunlight" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:45% 30%; filter:saturate(1.05);">
     <div style="position:absolute; inset:0; background:rgba(92,44,30,0.72); mix-blend-mode:multiply;"></div>
     <div style="position:absolute; inset:0; background:rgba(28,16,12,0.2);"></div>
     <div style="position:relative; max-width:860px; display:flex; flex-direction:column; align-items:center; text-align:center; color:#FFFFFF;">
@@ -56,7 +67,7 @@ html{scroll-behavior:smooth;}
       <h2 style="margin:0; font-weight:500; font-size:clamp(32px, 4.6vw, 48px); line-height:1.2; text-wrap:balance;">Waking up gently. Feeling less overwhelmed. Sleeping better. Coming back to yourself.</h2>
       <p style="margin:28px auto 0; max-width:30em; font-size:19px; line-height:1.85; text-wrap:pretty;">You're the mom and the superhero, and you have to get through this season too. It's time to let the sorrow burn off and watch the hurt go up in flames. You deserve to feel good again.</p>
       <div style="height:48px;"></div>
-      <figure style="margin:0; max-width:620px; display:flex; flex-direction:column; align-items:center; gap:20px; padding:32px clamp(22px, 4vw, 44px); background:transparent; border:1px solid rgba(255,255,255,0.22);">
+      <figure style="margin:0; max-width:620px; display:flex; flex-direction:column; align-items:center; gap:20px; padding:32px clamp(22px, 4vw, 44px);">
         <blockquote style="margin:0; font-style:italic; font-weight:400; font-size:clamp(22px, 2.8vw, 30px); line-height:1.4; text-wrap:balance;">“I was so busy taking care of everyone else that I forgot to <span style="color:#EDB7A6;">take care of me.</span>”</blockquote>
         <figcaption style="font-size:16px; font-style:italic;">Lucinda Rae</figcaption>
       </figure>
@@ -70,13 +81,13 @@ html{scroll-behavior:smooth;}
           <h3 style="margin:0; font-weight:500; font-size:24px; line-height:1.3;">Watch the video</h3>
           <p style="margin:0; font-size:17px; line-height:1.7; max-width:18em; text-wrap:pretty;">Ten minutes with Jena on what she drinks every morning and why.</p>
         </div>
-        <div class="lr-divider" style="width:1px; align-self:stretch; background:#D49A89;"></div>
+        <div style="width:1px; align-self:stretch; background:#D49A89;" class="divider"></div>
         <div style="flex:1 1 220px; display:flex; flex-direction:column; align-items:center; gap:6px; text-align:center;">
           <p style="margin:0; font-size:15px; letter-spacing:0.2em; color:#9A5A48;">02</p>
           <h3 style="margin:0; font-weight:500; font-size:24px; line-height:1.3;">Tell me your goals</h3>
           <p style="margin:0; font-size:17px; line-height:1.7; max-width:18em; text-wrap:pretty;">Send me a message. I read and answer every one myself.</p>
         </div>
-        <div class="lr-divider" style="width:1px; align-self:stretch; background:#D49A89;"></div>
+        <div style="width:1px; align-self:stretch; background:#D49A89;" class="divider"></div>
         <div style="flex:1 1 220px; display:flex; flex-direction:column; align-items:center; gap:6px; text-align:center;">
           <p style="margin:0; font-size:15px; letter-spacing:0.2em; color:#9A5A48;">03</p>
           <h3 style="margin:0; font-weight:500; font-size:24px; line-height:1.3;">Start your mornings</h3>
@@ -103,8 +114,8 @@ html{scroll-behavior:smooth;}
       <p style="margin:0 auto; max-width:34em; font-size:19px; line-height:1.85; text-wrap:pretty;">Send me a message and tell me what you're hoping for: more energy, better focus, calmer mornings, or just feeling like yourself again. I read and answer every message personally.</p>
       <p style="margin:26px 0 0; font-size:17px; font-style:italic; color:#9A5A48;">Or just message the word "GOALS" and we'll connect.</p>
       <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:36px;">
-        <a href="https://m.me/lucindarae" target="_blank" rel="noopener" style="flex:1 1 260px; display:flex; align-items:center; justify-content:center; min-height:60px; padding:0 28px; background:#D49A89; color:#FFFFFF; text-decoration:none; font-size:19px; transition:background .2s ease;" class="lr-h3">message me on facebook</a>
-        <a href="https://ig.me/m/lucindaraeofficial" target="_blank" rel="noopener" style="flex:1 1 260px; display:flex; align-items:center; justify-content:center; min-height:60px; padding:0 28px; background:#FFFFFF; border:1px solid #D49A89; color:#9A5A48; text-decoration:none; font-size:19px; transition:background .2s ease;" class="lr-h4">message me on instagram</a>
+        <a href="https://m.me/lucindarae" target="_blank" rel="noopener" style="flex:1 1 260px; display:flex; align-items:center; justify-content:center; min-height:60px; padding:0 28px; background:#D49A89; color:#FFFFFF; text-decoration:none; font-size:19px; transition:background .2s ease;" class="h3">message me on facebook</a>
+        <a href="https://ig.me/m/lucindaraeofficial" target="_blank" rel="noopener" style="flex:1 1 260px; display:flex; align-items:center; justify-content:center; min-height:60px; padding:0 28px; background:#FFFFFF; border:1px solid #D49A89; color:#9A5A48; text-decoration:none; font-size:19px; transition:background .2s ease;" class="h4">message me on instagram</a>
       </div>
     </div>
   </section>
@@ -117,7 +128,7 @@ html{scroll-behavior:smooth;}
         <p style="margin:0; font-size:19px; line-height:1.8; text-wrap:pretty;">These are the three products from the video. Together they cover your morning, your everyday balance and how you feel as the years go on. One ritual, three small steps, and a little time that's just for you.</p>
       </div>
       <div style="margin:52px 0 0;">
-        <img src="PASTE-KARTRA-URL-FOR-trio.png" alt="REVRS, SOURCE and RISE on a kitchen counter beside a morning glass" style="display:block; width:100%; aspect-ratio:3/2; object-fit:cover;">
+        <img src="assets/trio.png" alt="REVRS, SOURCE and RISE on a kitchen counter beside a morning glass" style="display:block; width:100%; aspect-ratio:3/2; object-fit:cover;">
       </div>
       <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:16px;">
         <div style="flex:1 1 260px; display:flex; flex-direction:column; align-items:center; gap:8px; padding:36px 28px; background:#FBF5F0; color:#4A3530; text-align:center;">
@@ -146,10 +157,10 @@ html{scroll-behavior:smooth;}
         <p style="margin:0; font-size:18px; line-height:1.8; text-wrap:pretty;"><strong style="font-weight:600;">My personal promise:</strong> Order through my link, then send me a message. I'll check in with you myself at day 7 and day 30 to see how your mornings are going.</p>
       </div>
       <div style="margin-top:40px; display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center;">
-        <a href="https://frequense.com/lucinda/product/all-products/frequense-rise-vibe-revrs-bundle-tub-skufre-bundle-019us-id69?cat=bundles" target="_blank" rel="noopener" style="display:flex; align-items:center; justify-content:center; width:100%; max-width:420px; min-height:64px; padding:0 40px; background:#FFFFFF; color:#9A5A48; text-decoration:none; font-size:21px; transition:background .2s ease;" class="lr-h5">get the trio</a>
+        <a href="https://frequense.com/lucinda/product/all-products/frequense-rise-vibe-revrs-bundle-tub-skufre-bundle-019us-id69?cat=bundles" target="_blank" rel="noopener" style="display:flex; align-items:center; justify-content:center; width:100%; max-width:420px; min-height:64px; padding:0 40px; background:#FFFFFF; color:#9A5A48; text-decoration:none; font-size:21px; transition:background .2s ease;" class="h5">get the trio</a>
         <p style="margin:0; font-size:15px; font-style:italic;">subscribe and save 10%</p>
         <p style="margin:18px 0 0; font-size:17px; line-height:1.7; max-width:30em;">Want to start smaller? Many mamas begin with Rise and Source and add Revrs later.</p>
-        <a href="https://frequense.com/lucinda/product/all-products/frequense-rise-vibe-bundle-tub-skufre-bundle-003us-id19?cat=bundles" target="_blank" rel="noopener" style="display:flex; align-items:center; justify-content:center; min-height:52px; padding:0 32px; border:1px solid #FFFFFF; color:#FFFFFF; text-decoration:none; font-size:18px; transition:background .2s ease;" class="lr-h6">get the duo</a>
+        <a href="https://frequense.com/lucinda/product/all-products/frequense-rise-vibe-bundle-tub-skufre-bundle-003us-id19?cat=bundles" target="_blank" rel="noopener" style="display:flex; align-items:center; justify-content:center; min-height:52px; padding:0 32px; border:1px solid #FFFFFF; color:#FFFFFF; text-decoration:none; font-size:18px; transition:background .2s ease;" class="h6">get the duo</a>
         <p style="margin:14px 0 0; font-size:16px;">Not sure which is right for you? <a href="https://m.me/lucindarae" target="_blank" rel="noopener" style="color:#FFFFFF; font-weight:600; text-underline-offset:3px;">Message me</a> and I'll help you choose.</p>
       </div>
     </div>
@@ -158,13 +169,13 @@ html{scroll-behavior:smooth;}
     <section data-screen-label="Meet Lucinda" style="background:#EFE3D3; padding:104px 24px;">
     <div style="max-width:1000px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:56px 72px;">
       <div style="flex:1 1 300px; max-width:420px; margin:0 auto;">
-        <img src="PASTE-KARTRA-URL-FOR-lu-headshot.png" alt="Portrait of Lucinda Rae" style="display:block; width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center 20%;">
+        <img src="assets/lu-headshot-2.jpg" alt="Portrait of Lucinda Rae" style="display:block; width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center 20%;">
       </div>
       <div style="flex:1.2 1 340px; display:flex; flex-direction:column; align-items:flex-start;">
         <p style="margin:0 0 14px; font-size:16px; font-style:italic; color:#9A5A48;">meet Lucinda</p>
         <h2 style="margin:0 0 24px; font-weight:500; font-size:clamp(38px, 5.2vw, 54px); line-height:1.1;">Hi, I'm <em style="font-style:italic; color:#B0705E;">Lucinda</em></h2>
         <p style="margin:0; font-size:19px; line-height:1.85; text-wrap:pretty;">I'm a mother, an author and an artist. I've walked through hard seasons with my family, and I know how easy it is to disappear inside them. If you're in one now, I'd love to hear from you. Tell me what's going on and what you're hoping for.</p>
-        <a href="https://m.me/lucindarae" target="_blank" rel="noopener" style="margin-top:36px; display:flex; align-items:center; justify-content:center; min-height:58px; padding:0 44px; background:#D49A89; color:#FFFFFF; text-decoration:none; font-size:19px; transition:background .2s ease;" class="lr-h7">message me</a>
+        <a href="https://m.me/lucindarae" target="_blank" rel="noopener" style="margin-top:36px; display:flex; align-items:center; justify-content:center; min-height:58px; padding:0 44px; background:#D49A89; color:#FFFFFF; text-decoration:none; font-size:19px; transition:background .2s ease;" class="h7">message me</a>
       </div>
     </div>
   </section>
@@ -179,14 +190,16 @@ html{scroll-behavior:smooth;}
   </footer>
 
     
-    <div style="position:fixed; left:0; right:0; bottom:0; z-index:60; padding:12px 14px calc(12px + env(safe-area-inset-bottom)); background:#FBF5F0; border-top:1px solid #D49A89; display:flex; gap:10px; transition:transform .35s ease, opacity .35s ease; transform:translateY(110%); opacity:0;" id="lr-bar">
+    <div style="position:fixed; left:0; right:0; bottom:0; z-index:60; padding:12px 14px calc(12px + env(safe-area-inset-bottom)); background:#FBF5F0; border-top:1px solid #D49A89; display:flex; gap:10px; transition:transform .35s ease, opacity .35s ease; transform:translateY(110%); opacity:0;" id="mbar">
       <a href="https://m.me/lucindarae" target="_blank" rel="noopener" style="flex:1 1 0; display:flex; align-items:center; justify-content:center; min-height:50px; background:#D49A89; color:#FFFFFF; text-decoration:none; font-size:17px;">message Lucinda</a>
       <a href="https://frequense.com/lucinda/product/all-products/frequense-rise-vibe-revrs-bundle-tub-skufre-bundle-019us-id69?cat=bundles" target="_blank" rel="noopener" style="flex:1 1 0; display:flex; align-items:center; justify-content:center; min-height:50px; background:#FFFFFF; border:1px solid #D49A89; color:#9A5A48; text-decoration:none; font-size:17px;">get the trio</a>
     </div>
   
 </div>
 <script>
-(function(){var h=document.getElementById('lr-hero'),b=document.getElementById('lr-bar');
+(function(){var h=document.getElementById('hero'),b=document.getElementById('mbar');
 function u(){if(!h||!b)return;var p=h.getBoundingClientRect().bottom<0;b.style.transform=p?'translateY(0)':'translateY(110%)';b.style.opacity=p?1:0;}
 window.addEventListener('scroll',u,{passive:true});u();})();
 </script>
+</body>
+</html>
