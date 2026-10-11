@@ -43,7 +43,8 @@ img{display:block;max-width:100%}
 .h25:hover{background:#1b524e !important;color:#fff !important}
 .h26:hover{border-color:#e0a585 !important;color:#e0a585 !important}
 .h27:hover{color:#f6eee4 !important}
-#mh-panel{max-height:calc(100vh - 66px);overflow-y:auto}
+#mh-panel{max-height:calc(100vh - 60px);max-height:calc(100dvh - 60px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding-bottom:env(safe-area-inset-bottom)}
+body.mh-lock{overflow:hidden}
 body{overflow-x:clip}
 @media (max-width:760px){
 #mh-logo{height:28px !important}
@@ -370,7 +371,7 @@ header a[href="https://motherhearted.substack.com/"]{padding:10px 14px !importan
 </footer>
 <script>
 (function(){var m=document.getElementById('mh-menu'),b=document.getElementById('mh-toggle'),c=document.getElementById('mh-caret');
-function set(o){m.hidden=!o;b.setAttribute('aria-expanded',o);c.textContent=o?'▲':'▼';}
+function set(o){m.hidden=!o;document.body.classList.toggle('mh-lock',!!o);b.setAttribute('aria-expanded',o);c.textContent=o?'▲':'▼';}
 b.addEventListener('click',function(e){e.stopPropagation();set(m.hidden);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
 document.addEventListener('click',function(e){if(!m.hidden&&!m.contains(e.target))set(false);});
