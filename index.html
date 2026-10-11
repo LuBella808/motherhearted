@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+<title>Motherhearted with Lucinda Rae</title>
+<meta name="description" content="For mothers of adult children in hard seasons. Faith, ritual and honest company on the road from self-sacrifice to self-restoration.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -18,23 +15,52 @@ a{color:#a4532f;text-decoration:none}
 a:hover{color:#1b524e}
 img{display:block;max-width:100%}
 </style>
-</helmet>
-
+<style>
+.h1:hover{background:#f1e1d4 !important}
+.h2:hover{background:#a4532f !important;color:#fff !important}
+.h3:hover{color:#9fd1c9 !important}
+.h4:hover{color:#9fd1c9 !important}
+.h5:hover{color:#9fd1c9 !important}
+.h6:hover{color:#9fd1c9 !important}
+.h7:hover{color:#9fd1c9 !important}
+.h8:hover{color:#9fd1c9 !important}
+.h9:hover{color:#9fd1c9 !important}
+.h10:hover{color:#9fd1c9 !important}
+.h11:hover{color:#9fd1c9 !important}
+.h12:hover{color:#9fd1c9 !important}
+.h13:hover{background:#1b524e !important;color:#fff !important}
+.h14:hover{border-color:#e9b38e !important;color:#e9b38e !important}
+.h15:hover{background:#1b524e !important;color:#fff !important}
+.h16:hover{border-color:#e9b38e !important;color:#e9b38e !important}
+.h17:hover{background:#f0d59a !important;color:#1b141a !important}
+.h18:hover{background:#fff !important;color:#a4532f !important}
+.h19:hover{background:#123d3a !important;color:#fff !important}
+.h20:hover{background:rgba(246,238,228,0.12) !important;color:#fff !important}
+.h21:hover{background:#a4532f !important;color:#fff !important}
+.h22:hover{background:#f3c9ae !important;color:#3d2418 !important}
+.h23:hover{border-color:#a4532f !important;color:#3d2418 !important}
+.h24:hover{background:#8f4526 !important;color:#f6eee4 !important}
+.h25:hover{background:#1b524e !important;color:#fff !important}
+.h26:hover{border-color:#e0a585 !important;color:#e0a585 !important}
+.h27:hover{color:#f6eee4 !important}
+</style>
+</head>
+<body>
 <header style="position:sticky;top:0;z-index:50;background:rgba(246,238,228,0.94);backdrop-filter:blur(10px);border-bottom:1px solid #e3cfbf">
   <div style="max-width:1280px;margin:0 auto;padding:12px clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:16px">
-    <a href="#top" onClick="{{ goTop }}" style="display:flex;align-items:center;flex-shrink:0">
+    <a href="#top" data-nav="1" style="display:flex;align-items:center;flex-shrink:0">
       <img src="assets/logo-wordmark.png" alt="Motherhearted with Lucinda Rae" style="height:40px;width:auto">
     </a>
     <div style="display:flex;align-items:center;gap:10px">
-      <button onClick="{{ toggleMenu }}" style="display:flex;align-items:center;gap:12px;padding:11px 18px;border:1px solid #c99a7c;border-radius:999px;background:#fffaf4;color:#3d2418;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer" style-hover="background:#f1e1d4">
+      <button id="mh-toggle" aria-expanded="false" aria-controls="mh-menu" style="display:flex;align-items:center;gap:12px;padding:11px 18px;border:1px solid #c99a7c;border-radius:999px;background:#fffaf4;color:#3d2418;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer" class="h1">
         <span style="display:flex;flex-direction:column;gap:4px;width:16px"><span style="height:1.5px;background:#a4532f;border-radius:2px"></span><span style="height:1.5px;background:#a4532f;border-radius:2px"></span><span style="height:1.5px;background:#a4532f;border-radius:2px"></span></span>
         <span>Menu</span>
-        <span style="font-size:9px;color:#a4532f">{{ caret }}</span>
+        <span style="font-size:9px;color:#a4532f"><span id="mh-caret">▼</span></span>
       </button>
-      <a href="https://motherhearted.substack.com/" target="_blank" style="padding:12px 20px;border-radius:999px;background:#4a2a1c;color:#f6eee4;font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;white-space:nowrap" style-hover="background:#a4532f;color:#fff">Join</a>
+      <a href="https://motherhearted.substack.com/" target="_blank" style="padding:12px 20px;border-radius:999px;background:#4a2a1c;color:#f6eee4;font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;white-space:nowrap" class="h2">Join</a>
     </div>
   </div>
-  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div id="mh-menu" hidden>
     <div style="position:absolute;left:0;right:0;top:100%;background:#4a2a1c;color:#f6eee4;box-shadow:0 30px 60px rgba(40,20,10,0.35);overflow:hidden">
       <div style="position:absolute;left:-10%;bottom:-60%;width:60%;height:140%;background:radial-gradient(closest-side,rgba(176,84,44,0.5),rgba(176,84,44,0));pointer-events:none"></div>
       <div style="position:absolute;right:-5%;top:-50%;width:50%;height:120%;background:radial-gradient(closest-side,rgba(194,110,70,0.32),rgba(194,110,70,0));pointer-events:none"></div>
@@ -44,27 +70,88 @@ img{display:block;max-width:100%}
           <span style="font-family:'Lora',serif;font-style:italic;font-size:19px;color:#ecd5c8">Begin anywhere. Every door leads home.</span>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));column-gap:28px">
-          <sc-for list="{{ sections }}" as="s" hint-placeholder-count="10">
-            <a href="#{{ s.id }}" onClick="{{ s.go }}" style="display:grid;grid-template-columns:34px 1fr;gap:4px 10px;padding:16px 0;border-bottom:1px solid rgba(246,238,228,0.12);color:#f6eee4" style-hover="color:#9fd1c9">
-              <span style="font-size:11px;font-weight:500;letter-spacing:0.1em;color:#e0a585;padding-top:6px">{{ s.num }}</span>
-              <span style="font-family:'Lora',serif;font-size:21px;line-height:1.2">{{ s.label }}</span>
+          
+            <a href="#home" data-nav="1" style="display:grid;grid-template-columns:34px 1fr;gap:4px 10px;padding:16px 0;border-bottom:1px solid rgba(246,238,228,0.12);color:#f6eee4" class="h3">
+              <span style="font-size:11px;font-weight:500;letter-spacing:0.1em;color:#e0a585;padding-top:6px">01</span>
+              <span style="font-family:'Lora',serif;font-size:21px;line-height:1.2">Welcome</span>
               <span></span>
-              <span style="font-size:13px;font-weight:400;line-height:1.5;color:#d8c1b2">{{ s.desc }}</span>
+              <span style="font-size:13px;font-weight:400;line-height:1.5;color:#d8c1b2">For mothers of adult children in hard seasons</span>
             </a>
-          </sc-for>
+          
+            <a href="#about" data-nav="1" style="display:grid;grid-template-columns:34px 1fr;gap:4px 10px;padding:16px 0;border-bottom:1px solid rgba(246,238,228,0.12);color:#f6eee4" class="h4">
+              <span style="font-size:11px;font-weight:500;letter-spacing:0.1em;color:#e0a585;padding-top:6px">02</span>
+              <span style="font-family:'Lora',serif;font-size:21px;line-height:1.2">About me</span>
+              <span></span>
+              <span style="font-size:13px;font-weight:400;line-height:1.5;color:#d8c1b2">Lucinda Rae & what Motherhearted is about</span>
+            </a>
+          
+            <a href="#substack" data-nav="1" style="display:grid;grid-template-columns:34px 1fr;gap:4px 10px;padding:16px 0;border-bottom:1px solid rgba(246,238,228,0.12);color:#f6eee4" class="h5">
+              <span style="font-size:11px;font-weight:500;letter-spacing:0.1em;color:#e0a585;padding-top:6px">03</span>
+              <span style="font-family:'Lora',serif;font-size:21px;line-height:1.2">Join the community</span>
+              <span></span>
+              <span style="font-size:13px;font-weight:400;line-height:1.5;color:#d8c1b2">From my heart to yours, on Substack</span>
+            </a>
+          
+            <a href="#course" data-nav="1" style="display:grid;grid-template-columns:34px 1fr;gap:4px 10px;padding:16px 0;border-bottom:1px solid rgba(246,238,228,0.12);color:#f6eee4" class="h6">
+              <span style="font-size:11px;font-weight:500;letter-spacing:0.1em;color:#e0a585;padding-top:6px">04</span>
+              <span style="font-family:'Lora',serif;font-size:21px;line-height:1.2">Take my course</span>
+              <span></span>
+              <span style="font-size:13px;font-weight:400;line-height:1.5;color:#d8c1b2">From self-sacrifice to self-restoration</span>
+            </a>
+          
+            <a href="#podcast" data-nav="1" style="display:grid;grid-template-columns:34px 1fr;gap:4px 10px;padding:16px 0;border-bottom:1px solid rgba(246,238,228,0.12);color:#f6eee4" class="h7">
+              <span style="font-size:11px;font-weight:500;letter-spacing:0.1em;color:#e0a585;padding-top:6px">05</span>
+              <span style="font-family:'Lora',serif;font-size:21px;line-height:1.2">The podcast</span>
+              <span></span>
+              <span style="font-size:13px;font-weight:400;line-height:1.5;color:#d8c1b2">Substack, Spotify & Apple Podcasts</span>
+            </a>
+          
+            <a href="#tees" data-nav="1" style="display:grid;grid-template-columns:34px 1fr;gap:4px 10px;padding:16px 0;border-bottom:1px solid rgba(246,238,228,0.12);color:#f6eee4" class="h8">
+              <span style="font-size:11px;font-weight:500;letter-spacing:0.1em;color:#e0a585;padding-top:6px">06</span>
+              <span style="font-family:'Lora',serif;font-size:21px;line-height:1.2">Mama & women tees</span>
+              <span></span>
+              <span style="font-size:13px;font-weight:400;line-height:1.5;color:#d8c1b2">Wear your faith</span>
+            </a>
+          
+            <a href="#quiz" data-nav="1" style="display:grid;grid-template-columns:34px 1fr;gap:4px 10px;padding:16px 0;border-bottom:1px solid rgba(246,238,228,0.12);color:#f6eee4" class="h9">
+              <span style="font-size:11px;font-weight:500;letter-spacing:0.1em;color:#e0a585;padding-top:6px">07</span>
+              <span style="font-family:'Lora',serif;font-size:21px;line-height:1.2">Matriarchetype quiz</span>
+              <span></span>
+              <span style="font-size:13px;font-weight:400;line-height:1.5;color:#d8c1b2">Discover your anointing oil</span>
+            </a>
+          
+            <a href="#wellness" data-nav="1" style="display:grid;grid-template-columns:34px 1fr;gap:4px 10px;padding:16px 0;border-bottom:1px solid rgba(246,238,228,0.12);color:#f6eee4" class="h10">
+              <span style="font-size:11px;font-weight:500;letter-spacing:0.1em;color:#e0a585;padding-top:6px">08</span>
+              <span style="font-family:'Lora',serif;font-size:21px;line-height:1.2">Wellness secrets</span>
+              <span></span>
+              <span style="font-size:13px;font-weight:400;line-height:1.5;color:#d8c1b2">Calm, grounded & home in myself</span>
+            </a>
+          
+            <a href="#anointing" data-nav="1" style="display:grid;grid-template-columns:34px 1fr;gap:4px 10px;padding:16px 0;border-bottom:1px solid rgba(246,238,228,0.12);color:#f6eee4" class="h11">
+              <span style="font-size:11px;font-weight:500;letter-spacing:0.1em;color:#e0a585;padding-top:6px">09</span>
+              <span style="font-family:'Lora',serif;font-size:21px;line-height:1.2">Art of Anointing</span>
+              <span></span>
+              <span style="font-size:13px;font-weight:400;line-height:1.5;color:#d8c1b2">Holy oils, daily ritual & prayer</span>
+            </a>
+          
+            <a href="#books" data-nav="1" style="display:grid;grid-template-columns:34px 1fr;gap:4px 10px;padding:16px 0;border-bottom:1px solid rgba(246,238,228,0.12);color:#f6eee4" class="h12">
+              <span style="font-size:11px;font-weight:500;letter-spacing:0.1em;color:#e0a585;padding-top:6px">10</span>
+              <span style="font-family:'Lora',serif;font-size:21px;line-height:1.2">Books for mothers</span>
+              <span></span>
+              <span style="font-size:13px;font-weight:400;line-height:1.5;color:#d8c1b2">Four books, one heart</span>
+            </a>
+          
         </div>
       </div>
     </div>
-  </sc-if>
+  </div>
 </header>
 
 <main id="top">
 
 <section id="home" data-screen-label="01 Hero" style="position:relative;background:#3a2117;color:#f6eee4;overflow:hidden;min-height:calc(100vh - 66px);display:flex;align-items:center">
   <div style="position:absolute;top:0;right:0;bottom:0;width:min(100%,68%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 45%);mask-image:linear-gradient(90deg,transparent 0%,#000 45%)">
-    <sc-if value="{{ heroPrayer }}" hint-placeholder-val="{{ true }}"><img src="assets/lu-prayer.jpg" alt="Lucinda Rae in golden light, eyes closed in prayer" style="width:100%;height:100%;object-fit:cover;object-position:70% 35%"></sc-if>
-    <sc-if value="{{ heroSun }}" hint-placeholder-val="{{ false }}"><img src="assets/lu-sun.jpg" alt="Lucinda Rae in golden sunlight" style="width:100%;height:100%;object-fit:cover;object-position:55% 30%"></sc-if>
-    <sc-if value="{{ heroGold }}" hint-placeholder-val="{{ false }}"><img src="assets/lu-gold.jpg" alt="Lucinda Rae wrapped in golden silk" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%"></sc-if>
+    <img src="assets/lu-prayer.jpg" alt="Lucinda Rae in golden light, eyes closed in prayer" style="width:100%;height:100%;object-fit:cover;object-position:70% 35%">
   </div>
   <div style="position:absolute;inset:0;background:linear-gradient(90deg,#3a2117 0%,rgba(58,33,23,0.92) 28%,rgba(92,46,26,0.6) 46%,rgba(160,82,45,0.25) 64%,rgba(214,150,90,0.06) 82%,rgba(0,0,0,0) 100%)"></div>
   <div style="position:absolute;left:-10%;bottom:-30%;width:70%;height:90%;background:radial-gradient(closest-side,rgba(176,84,44,0.45),rgba(176,84,44,0))"></div>
@@ -75,8 +162,8 @@ img{display:block;max-width:100%}
       <h1 style="margin:0;font-family:'Lora',serif;font-weight:400;font-size:clamp(40px,5vw,68px);line-height:1.08;letter-spacing:-0.01em;text-wrap:balance">When your child is in crisis, <em style="color:#e9b38e">your heart needs tending too.</em></h1>
       <p style="margin:0;font-size:clamp(16px,1.3vw,18px);font-weight:400;line-height:1.75;color:#f0ddd0;max-width:46ch;text-wrap:pretty">Mental illness, addiction, incarceration. I have walked each of these beside my own children. Motherhearted is a soft place to land: faith, ritual and honest company on the road from self-sacrifice back to self-restoration.</p>
       <div style="display:flex;flex-wrap:wrap;gap:12px">
-        <a href="https://motherhearted.substack.com/" target="_blank" style="padding:16px 26px;border-radius:999px;background:#c27a54;color:#fff;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase" style-hover="background:#1b524e;color:#fff">Join the community</a>
-        <a href="#podcast" onClick="{{ goPodcast }}" style="padding:16px 26px;border-radius:999px;border:1px solid rgba(246,238,228,0.45);color:#f6eee4;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase" style-hover="border-color:#e9b38e;color:#e9b38e">Listen to the podcast</a>
+        <a href="https://motherhearted.substack.com/" target="_blank" style="padding:16px 26px;border-radius:999px;background:#c27a54;color:#fff;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase" class="h13">Join the community</a>
+        <a href="#podcast" data-nav="1" style="padding:16px 26px;border-radius:999px;border:1px solid rgba(246,238,228,0.45);color:#f6eee4;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase" class="h14">Listen to the podcast</a>
       </div>
     </div>
   </div>
@@ -126,14 +213,14 @@ img{display:block;max-width:100%}
       <div style="padding:22px;background:rgba(194,122,84,0.22);border:1px solid rgba(233,179,142,0.45);border-radius:6px;backdrop-filter:blur(6px)"><div style="font-size:11px;font-weight:500;color:#e9b38e;letter-spacing:0.14em">06 · COMING SOON</div><div style="font-family:'Lora',serif;font-size:22px;margin-top:10px">Community circle</div><div style="font-size:13px;font-weight:400;line-height:1.6;color:#e6d0c2;margin-top:6px">A private gathering place for mothers walking this road together.</div></div>
     </div>
     <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px">
-      <sc-if value="{{ showEmbed }}" hint-placeholder-val="{{ true }}">
+      
         <div style="flex:1 1 380px;max-width:520px;background:#fffaf4;border-radius:6px;overflow:hidden">
           <iframe src="https://motherhearted.substack.com/embed" title="Subscribe to Motherhearted" style="width:100%;height:150px;border:0;display:block" frameborder="0" scrolling="no"></iframe>
         </div>
-      </sc-if>
+      
       <div style="display:flex;flex-wrap:wrap;gap:12px">
-        <a href="https://motherhearted.substack.com/" target="_blank" style="padding:16px 26px;border-radius:999px;background:#c27a54;color:#fff;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase" style-hover="background:#1b524e;color:#fff">Join the community</a>
-        <a href="https://motherhearted.substack.com/archive" target="_blank" style="padding:16px 26px;border-radius:999px;border:1px solid rgba(246,238,228,0.45);color:#f6eee4;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase" style-hover="border-color:#e9b38e;color:#e9b38e">Browse the archive</a>
+        <a href="https://motherhearted.substack.com/" target="_blank" style="padding:16px 26px;border-radius:999px;background:#c27a54;color:#fff;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase" class="h15">Join the community</a>
+        <a href="https://motherhearted.substack.com/archive" target="_blank" style="padding:16px 26px;border-radius:999px;border:1px solid rgba(246,238,228,0.45);color:#f6eee4;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase" class="h16">Browse the archive</a>
       </div>
     </div>
   </div>
@@ -154,7 +241,7 @@ img{display:block;max-width:100%}
       <div style="background:#1b141a;padding:28px 24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'Lora',serif;font-style:italic;font-size:26px;color:#d9b56a">Renew</span><span style="font-size:14px;font-weight:400;line-height:1.6;color:#e6d9cc">your spirit through soul-nourishing ritual</span></div>
       <div style="background:#1b141a;padding:28px 24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'Lora',serif;font-style:italic;font-size:26px;color:#d9b56a">Reclaim</span><span style="font-size:14px;font-weight:400;line-height:1.6;color:#e6d9cc">your strength, for your family and for you</span></div>
     </div>
-    <a href="https://lucindaraestudio.com/motherhearted" target="_blank" style="margin-top:8px;padding:17px 32px;border-radius:999px;background:linear-gradient(135deg,#e2c27a,#b8893f);color:#1b141a;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase" style-hover="background:#f0d59a;color:#1b141a">Enroll in the course</a>
+    <a href="https://lucindaraestudio.com/motherhearted" target="_blank" style="margin-top:8px;padding:17px 32px;border-radius:999px;background:linear-gradient(135deg,#e2c27a,#b8893f);color:#1b141a;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase" class="h17">Enroll in the course</a>
   </div>
 </section>
 
@@ -168,9 +255,9 @@ img{display:block;max-width:100%}
       <h2 style="margin:0;font-family:'Lora',serif;font-weight:400;font-size:clamp(40px,5vw,64px);line-height:1.06;text-wrap:balance">Motherhearted, <em style="color:#f3c9ae">the podcast.</em></h2>
       <p style="margin:0;font-size:18px;font-weight:400;line-height:1.75;color:#f6e6da;max-width:40ch;text-wrap:pretty">Light a candle, pour something warm, and stay a while. Honest conversations on faith, grief, healing and the holy work of mothering yourself.</p>
       <div style="display:flex;flex-direction:column;gap:10px;max-width:380px">
-        <a href="https://motherhearted.substack.com/podcast" target="_blank" style="display:flex;justify-content:space-between;align-items:center;padding:16px 22px;border-radius:999px;background:#f6eee4;color:#4a2a1c;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase" style-hover="background:#fff;color:#a4532f"><span>Listen on Substack</span><span>→</span></a>
-        <a href="https://open.spotify.com/show/2xYVFQ0ivbYQzliP2XiZHE?si=69b19412222a4b35" target="_blank" style="display:flex;justify-content:space-between;align-items:center;padding:16px 22px;border-radius:999px;background:#1b524e;color:#fff;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase" style-hover="background:#123d3a;color:#fff"><span>Listen on Spotify</span><span>→</span></a>
-        <a href="https://podcasts.apple.com/us/podcast/motherhearted-podcast/id1813682962" target="_blank" style="display:flex;justify-content:space-between;align-items:center;padding:16px 22px;border-radius:999px;border:1px solid rgba(246,238,228,0.6);color:#f6eee4;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase" style-hover="background:rgba(246,238,228,0.12);color:#fff"><span>Apple Podcasts</span><span>→</span></a>
+        <a href="https://motherhearted.substack.com/podcast" target="_blank" style="display:flex;justify-content:space-between;align-items:center;padding:16px 22px;border-radius:999px;background:#f6eee4;color:#4a2a1c;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase" class="h18"><span>Listen on Substack</span><span>→</span></a>
+        <a href="https://open.spotify.com/show/2xYVFQ0ivbYQzliP2XiZHE?si=69b19412222a4b35" target="_blank" style="display:flex;justify-content:space-between;align-items:center;padding:16px 22px;border-radius:999px;background:#1b524e;color:#fff;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase" class="h19"><span>Listen on Spotify</span><span>→</span></a>
+        <a href="https://podcasts.apple.com/us/podcast/motherhearted-podcast/id1813682962" target="_blank" style="display:flex;justify-content:space-between;align-items:center;padding:16px 22px;border-radius:999px;border:1px solid rgba(246,238,228,0.6);color:#f6eee4;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase" class="h20"><span>Apple Podcasts</span><span>→</span></a>
       </div>
     </div>
     <img src="assets/podcast-phone.png" alt="Motherhearted podcast playing on a phone beside a candle" style="width:100%;max-width:560px;height:auto;justify-self:center;filter:drop-shadow(0 24px 28px rgba(40,16,8,0.45)) drop-shadow(0 6px 8px rgba(40,16,8,0.3))">
@@ -183,7 +270,7 @@ img{display:block;max-width:100%}
       <span style="font-size:11px;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:#a4532f">Mama & women tees</span>
       <h2 style="margin:0;font-family:'Lora',serif;font-weight:400;font-size:clamp(40px,5vw,64px);line-height:1.06;text-wrap:balance">Wear your faith. <em style="color:#a4532f">Let it hold you.</em></h2>
       <p style="margin:0;font-size:18px;font-weight:400;line-height:1.75;text-wrap:pretty">Oversized, heavyweight tees carrying the words we need to remember: you are covered, you are held, you are enough. For hard mornings, long drives and visiting days, a reminder worn close to your heart.</p>
-      <div><a href="https://www.anointedrituals.com/collections/t-shirts" target="_blank" style="display:inline-block;padding:16px 28px;border-radius:999px;background:#4a2a1c;color:#f6eee4;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase" style-hover="background:#a4532f;color:#fff">Shop the tees</a></div>
+      <div><a href="https://www.anointedrituals.com/collections/t-shirts" target="_blank" style="display:inline-block;padding:16px 28px;border-radius:999px;background:#4a2a1c;color:#f6eee4;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase" class="h21">Shop the tees</a></div>
     </div>
     <img src="assets/tee.webp" alt="Woman wearing an I'm Covered in Prayer t-shirt" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px">
   </div>
@@ -197,13 +284,13 @@ img{display:block;max-width:100%}
     <span style="font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:#a8dcd3">The Matriarchetype Quiz</span>
     <h2 style="margin:0;font-family:'Lora',serif;font-weight:400;font-size:clamp(40px,5.4vw,70px);line-height:1.06;text-wrap:balance;text-shadow:0 0 40px rgba(120,210,195,0.35)">Which matriarch <em style="color:#f3c9ae">is blessing you?</em></h2>
     <p style="margin:0;font-size:18px;font-weight:400;line-height:1.75;color:#d6ebe6;max-width:46ch;text-wrap:pretty">Discover your anointing oil and the motherly qualities the matriarchs of old can pour into your life right now.</p>
-    <a href="https://artofanointing.com/matriarchetype-quiz" target="_blank" style="padding:18px 32px;border-radius:999px;background:#f6eee4;color:#0f2f2e;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;box-shadow:0 0 40px rgba(120,210,195,0.4)" style-hover="background:#f3c9ae;color:#3d2418">Take the quiz</a>
+    <a href="https://artofanointing.com/matriarchetype-quiz" target="_blank" style="padding:18px 32px;border-radius:999px;background:#f6eee4;color:#0f2f2e;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;box-shadow:0 0 40px rgba(120,210,195,0.4)" class="h22">Take the quiz</a>
   </div>
 </section>
 
 <section id="wellness" data-screen-label="08 Wellness" style="background:#f6eee4">
   <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,10vw,130px) clamp(20px,5vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px">
-    <a href="https://motherhearted.vercel.app/feel-good" target="_blank" style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding:clamp(32px,4vw,52px);background:#fffaf4;border:1px solid #e3cfbf;border-radius:6px;color:#3d2418" style-hover="border-color:#a4532f;color:#3d2418">
+    <a href="https://motherhearted.vercel.app/feel-good" target="_blank" style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding:clamp(32px,4vw,52px);background:#fffaf4;border:1px solid #e3cfbf;border-radius:6px;color:#3d2418" class="h23">
       <div style="display:flex;flex-direction:column;gap:18px">
         <span style="font-size:11px;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:#a4532f">My wellness secrets</span>
         <h2 style="margin:0;font-family:'Lora',serif;font-weight:400;font-size:clamp(32px,3.6vw,46px);line-height:1.12;text-wrap:balance">Feeling calm, grounded <em style="color:#a4532f">& home in myself.</em></h2>
@@ -211,7 +298,7 @@ img{display:block;max-width:100%}
       </div>
       <span style="font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#a4532f">See my feel-good list →</span>
     </a>
-    <a id="anointing" href="https://artofanointing.com/" target="_blank" data-screen-label="09 Art of Anointing" style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding:clamp(32px,4vw,52px);background:#a4532f;border-radius:6px;color:#f6eee4;position:relative;overflow:hidden" style-hover="background:#8f4526;color:#f6eee4">
+    <a id="anointing" href="https://artofanointing.com/" target="_blank" data-screen-label="09 Art of Anointing" style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding:clamp(32px,4vw,52px);background:#a4532f;border-radius:6px;color:#f6eee4;position:relative;overflow:hidden" class="h24">
       <img src="assets/dove.png" alt="" style="position:absolute;right:24px;top:24px;width:90px;height:auto;filter:brightness(1.4) saturate(0.6)">
       <div style="display:flex;flex-direction:column;gap:18px;position:relative">
         <span style="font-size:11px;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:#f3c9ae">Art of Anointing</span>
@@ -232,8 +319,8 @@ img{display:block;max-width:100%}
         <h2 style="margin:0;font-family:'Lora',serif;font-weight:400;font-size:clamp(38px,4.6vw,60px);line-height:1.08;text-wrap:balance">Four books, <em style="color:#e0a585">one heart.</em></h2>
         <p style="margin:0;font-size:17px;font-weight:400;line-height:1.75;color:#ecd5c8;text-wrap:pretty">Each one grew from the same ground: loving my children through the hardest seasons, and finding my way back to myself. Subscribers get the first peeks inside every one.</p>
         <div style="display:flex;flex-wrap:wrap;gap:12px">
-          <a href="https://motherhearted.substack.com/subscribe" target="_blank" style="padding:16px 26px;border-radius:999px;background:#c27a54;color:#fff;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase" style-hover="background:#1b524e;color:#fff">Get the first peeks</a>
-          <a href="https://motherhearted.substack.com/p/books" target="_blank" style="padding:16px 26px;border-radius:999px;border:1px solid rgba(246,238,228,0.45);color:#f6eee4;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase" style-hover="border-color:#e0a585;color:#e0a585">About the books</a>
+          <a href="https://motherhearted.substack.com/subscribe" target="_blank" style="padding:16px 26px;border-radius:999px;background:#c27a54;color:#fff;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase" class="h25">Get the first peeks</a>
+          <a href="https://motherhearted.substack.com/p/books" target="_blank" style="padding:16px 26px;border-radius:999px;border:1px solid rgba(246,238,228,0.45);color:#f6eee4;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase" class="h26">About the books</a>
         </div>
       </div>
     </div>
@@ -243,7 +330,7 @@ img{display:block;max-width:100%}
       <div style="background:#3a2117;padding:28px 24px;display:flex;flex-direction:column;gap:12px"><span style="align-self:flex-start;padding:5px 10px;border-radius:999px;border:1px solid rgba(224,165,133,0.6);color:#e0a585;font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase">In the works</span><span style="font-family:'Lora',serif;font-size:22px;line-height:1.25">Motherhearted: A Memoir</span><span style="font-size:14px;font-weight:400;line-height:1.65;color:#d8c1b2">The book of my life, years in the making, because my story is still being written.</span></div>
       <div style="background:#3a2117;padding:28px 24px;display:flex;flex-direction:column;gap:12px"><span style="align-self:flex-start;padding:5px 10px;border-radius:999px;border:1px solid rgba(224,165,133,0.6);color:#e0a585;font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase">To follow</span><span style="font-family:'Lora',serif;font-size:22px;line-height:1.25">The Eve Trilogy, Book One</span><span style="font-size:14px;font-weight:400;line-height:1.65;color:#d8c1b2">The first of three, grown from the same soil.</span></div>
     </div>
-    <a href="http://hellolucinda.com/books" target="_blank" style="align-self:center;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#e0a585" style-hover="color:#f6eee4">See all my books →</a>
+    <a href="http://hellolucinda.com/books" target="_blank" style="align-self:center;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#e0a585" class="h27">See all my books →</a>
   </div>
 </section>
 
@@ -266,64 +353,14 @@ img{display:block;max-width:100%}
     <span style="font-size:11px;letter-spacing:0.1em;color:#6b4a3a">© 2026 Motherhearted with Lucinda Rae</span>
   </div>
 </footer>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;heroPhoto&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;prayer&quot;,&quot;sun&quot;,&quot;gold&quot;],&quot;default&quot;:&quot;prayer&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;showSubscribeEmbed&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
-class Component extends DCLogic {
-  state = { menuOpen: false, active: 'home' };
-  SECTIONS = [
-    ['home', 'Welcome', 'For mothers of adult children in hard seasons'],
-    ['about', 'About me', 'Lucinda Rae & what Motherhearted is about'],
-    ['substack', 'Join the community', 'From my heart to yours, on Substack'],
-    ['course', 'Take my course', 'From self-sacrifice to self-restoration'],
-    ['podcast', 'The podcast', 'Substack, Spotify & Apple Podcasts'],
-    ['tees', 'Mama & women tees', 'Wear your faith'],
-    ['quiz', 'Matriarchetype quiz', 'Discover your anointing oil'],
-    ['wellness', 'Wellness secrets', 'Calm, grounded & home in myself'],
-    ['anointing', 'Art of Anointing', 'Holy oils, daily ritual & prayer'],
-    ['books', 'Upcoming books', 'Four books, one heart']
-  ];
-  componentDidMount() {
-    this.onScroll = () => {
-      let cur = 'home';
-      for (const [id] of this.SECTIONS) {
-        const el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top < 140) cur = id;
-      }
-      if (cur !== this.state.active) this.setState({ active: cur });
-    };
-    this.onKey = e => { if (e.key === 'Escape') this.setState({ menuOpen: false }); };
-    window.addEventListener('scroll', this.onScroll, { passive: true });
-    window.addEventListener('keydown', this.onKey);
-  }
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.onScroll);
-    window.removeEventListener('keydown', this.onKey);
-  }
-  go(id, e) {
-    if (e) e.preventDefault();
-    const el = document.getElementById(id);
-    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 66, behavior: 'smooth' });
-    this.setState({ menuOpen: false, active: id });
-  }
-  renderVals() {
-    const idx = Math.max(0, this.SECTIONS.findIndex(s => s[0] === this.state.active));
-    const hero = this.props.heroPhoto ?? 'prayer';
-    return {
-      menuOpen: this.state.menuOpen,
-      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
-      caret: this.state.menuOpen ? '▲' : '▼',
-      activeNum: String(idx + 1).padStart(2, '0'),
-      activeLabel: this.SECTIONS[idx][1],
-      sections: this.SECTIONS.map(([id, label, desc], i) => ({ id, label, desc, num: String(i + 1).padStart(2, '0'), go: e => this.go(id, e) })),
-      goTop: e => this.go('home', e),
-      goPodcast: e => this.go('podcast', e),
-      heroPrayer: hero === 'prayer',
-      heroSun: hero === 'sun',
-      heroGold: hero === 'gold',
-      showEmbed: this.props.showSubscribeEmbed ?? true
-    };
-  }
-}
+<script>
+(function(){var m=document.getElementById('mh-menu'),b=document.getElementById('mh-toggle'),c=document.getElementById('mh-caret');
+function set(o){m.hidden=!o;b.setAttribute('aria-expanded',o);c.textContent=o?'▲':'▼';}
+b.addEventListener('click',function(e){e.stopPropagation();set(m.hidden);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+document.addEventListener('click',function(e){if(!m.hidden&&!m.contains(e.target))set(false);});
+document.querySelectorAll('[data-nav]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href').slice(1),el=document.getElementById(id==='top'?'home':id);if(!el)return;e.preventDefault();set(false);window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-66,behavior:'smooth'});history.replaceState(null,'','#'+id);});});
+})();
 </script>
 </body>
 </html>
